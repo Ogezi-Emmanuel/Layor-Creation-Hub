@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: {
@@ -38,9 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-[#1A1A1A] text-white min-h-screen">
-        <Navbar />
-        {children}
-        <Footer />
+        <ErrorBoundary>
+          <Navbar />
+          {children}
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   );

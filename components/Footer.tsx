@@ -16,16 +16,18 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-center md:justify-start mb-6">
-              <div className="relative group cursor-pointer w-24 h-24 flex items-center justify-center"> {/* Added fixed size container */}
-                <div className="absolute inset-0 bg-[#E0BFB8]/20 rounded-3xl blur-xl group-hover:bg-[#E0BFB8]/35 transition-all duration-700 group-hover:scale-110" /> {/* Changed to rounded-3xl */}
-                <Image 
-                  src="/Logo.png"
-                  alt="Layor Creation Hub Logo"
-                  width={80}  // Adjusted size
-                  height={80} // Adjusted size
-                  className="object-contain relative z-10 rounded-3xl p-1 border border-white/10 group-hover:border-[#E0BFB8]/40 transition-all duration-500" // Changed to rounded-3xl
-                />
-              </div>
+              <Link href="/" aria-label="Go to Layor Creation Hub home page">
+                <div className="relative group cursor-pointer w-24 h-24 flex items-center justify-center"> {/* Added fixed size container */}
+                  <div className="absolute inset-0 bg-[#E0BFB8]/20 rounded-3xl blur-xl group-hover:bg-[#E0BFB8]/35 transition-all duration-700 group-hover:scale-110" /> {/* Changed to rounded-3xl */}
+                  <Image 
+                    src="/Logo.png"
+                    alt="Layor Creation Hub Logo"
+                    width={80}  // Adjusted size
+                    height={80} // Adjusted size
+                    className="object-contain relative z-10 rounded-3xl p-1 border border-white/10 group-hover:border-[#E0BFB8]/40 transition-all duration-500" // Changed to rounded-3xl
+                  />
+                </div>
+              </Link>
             </div>
             <p className="text-base text-gray-400 leading-relaxed">Based in Lagos, we blend traditional Nigerian artistry with modern haute couture techniques to create pieces that stand the test of time.</p>
           </motion.div>
@@ -37,7 +39,15 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h4 className="font-serif text-2xl mb-6 text-[#E0BFB8]">Get in Touch</h4>
-            <p className="text-lg text-gray-400 mb-3">WhatsApp: +234 808 998 0364</p>
+            <Link 
+              href="https://api.whatsapp.com/send?phone=2348089980364" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Contact us on WhatsApp"
+              className="block text-lg text-gray-400 hover:text-[#E0BFB8] transition-colors mb-3"
+            >
+              WhatsApp: +234 808 998 0364
+            </Link>
             <p className="text-lg text-gray-400 mb-3">Lagos, Nigeria</p>
             <p className="text-base text-gray-500 mt-6">Ready to bring your vision to life? Send us a message anytime.</p>
           </motion.div>

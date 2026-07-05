@@ -24,7 +24,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#1A1A1A]/98 backdrop-blur-2xl shadow-lg shadow-[#E0BFB8]/5' : 'bg-gradient-to-b from-[#1A1A1A]/95 via-[#1A1A1A]/80 to-transparent backdrop-blur-xl'} border-b border-white/10`}>
+    <nav className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${scrolled ? 'bg-[#1A1A1A]/98 backdrop-blur-2xl shadow-lg shadow-[#E0BFB8]/5' : 'bg-gradient-to-b from-[#1A1A1A]/95 via-[#1A1A1A]/80 to-transparent backdrop-blur-xl'} border-b border-white/10`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo on Left */}
